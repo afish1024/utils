@@ -9,7 +9,7 @@ getIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
 getIntegers("abc", 6) // [] - 有一个参数不是数字
 ```
  */
-export function getIntegers(from: unknown, to: unknown): number[] {
+export default function getIntegers(from: unknown, to: unknown): number[] {
   if (typeof from !== 'number' || typeof to !== 'number') {
     return []
   }

@@ -8,7 +8,7 @@ import { hasRunningInBrowser } from '@fish/utils'
 hasRunningInBrowser() // true
 ```
  */
-export function hasRunningInBrowser(): boolean {
+export default function hasRunningInBrowser(): boolean {
   if (typeof window === 'object' && typeof document === 'object') {
     return true
   }

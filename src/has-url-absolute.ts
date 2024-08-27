@@ -10,7 +10,7 @@ hasUrlAbsolute("/page") // false
 hasUrlAbsolute(123) // false - input is not a string
 ```
  */
-export const hasUrlAbsolute = (url: unknown): boolean => {
+export default function hasUrlAbsolute(url: unknown): boolean {
   if (typeof url !== 'string') return false
   // regex sourced from https://stackoverflow.com/a/19709846
   return /^(?:[+a-z]+:)?\/\//iu.test(url)

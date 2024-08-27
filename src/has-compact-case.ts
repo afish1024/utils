@@ -10,7 +10,7 @@ hasCompactCase('this is not compact') // false
 hasCompactCase(123) // false - input is not a string
 ```
  */
-export function hasCompactCase(input: unknown): input is string {
+export default function hasCompactCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }

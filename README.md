@@ -3,6 +3,20 @@
 
 A collection of small JavaScript utilities.
 
+使用：
+
+```bash
+npm install @fish1024/utils
+
+```
+
+```ts
+import { getIntegers } from "@fish1024/utils"
+
+// 按需引入
+import getIntegers from "@fish1024/utils/get-integers"
+```
+
 
 ## issue
 

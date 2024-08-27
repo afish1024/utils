@@ -10,7 +10,7 @@ hasLowerCase('This is not LOWER') // false
 hasLowerCase(123) // false - input is not a string
 ```
  */
-export function hasLowerCase(input: unknown): input is string {
+export default function hasLowerCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }

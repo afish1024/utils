@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { hasCompactCase } from '../src/has-compact-case.js'
+import hasCompactCase from '../src/has-compact-case.js'
 
 const falsey = [
   123,

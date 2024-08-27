@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { hasUrlAbsolute } from '../src/has-url-absolute.js'
+import hasUrlAbsolute from '../src/has-url-absolute.js'
 
 test.each([
   ['http://example.com/page', true],

@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { hasUnique } from '../src/has-unique.js'
+import hasUnique from '../src/has-unique.js'
 
 // should return false when array does not contain unique items
 test('当数组包含重复项时应该返回 false', () => {

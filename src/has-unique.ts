@@ -10,7 +10,7 @@ hasUnique([1, 1, 2]) // false
 hasUnique('not array') // true
 ```
  */
-export function hasUnique(input: unknown): boolean {
+export default function hasUnique(input: unknown): boolean {
   if (Array.isArray(input)) {
     return new Set(input).size === input.length
   }

@@ -1,4 +1,4 @@
-import { toNumber } from './to-number.js'
+import toNumber from './to-number.js'
 
 /**
  * 如果可能，将数字转换为其序数字符串形式，否则返回第 0 个。
@@ -16,7 +16,7 @@ toOrdinal('11') // 11th
 toOrdinal(3.14) // 3.14th
 ```
  */
-export function toOrdinal(input: unknown = 0): string {
+export default function toOrdinal(input: unknown = 0): string {
   const number = toNumber(input)
   const isInt = Number.isInteger(number)
 

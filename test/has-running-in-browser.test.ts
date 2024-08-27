@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { hasRunningInBrowser } from '../src/has-running-in-browser.js'
+import hasRunningInBrowser from '../src/has-running-in-browser.js'
 
 test('isBrowser is true', () => {
   const originalWindow = global.window

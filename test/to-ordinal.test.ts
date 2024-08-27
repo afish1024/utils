@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { toOrdinal } from '../src/to-ordinal.js'
+import toOrdinal from '../src/to-ordinal.js'
 
 const cases = [
   // Nonsense

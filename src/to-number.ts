@@ -11,7 +11,7 @@ toNumber(0.4) // 0.4
 toNumber(new Set([])) // 0
 ```
  */
-export function toNumber(input: unknown): number {
+export default function toNumber(input: unknown): number {
   try {
     const number = Number(input)
 

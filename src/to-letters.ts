@@ -9,6 +9,6 @@ toLetters('this is text') // thisistext
 toLetters('123-Text!!!') // Text
 ```
  */
-export function toLetters(input: unknown): string {
+export default function toLetters(input: unknown): string {
   return String(input).replaceAll(/[^a-zA-Z]/gu, '')
 }

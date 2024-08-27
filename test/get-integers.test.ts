@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { getIntegers } from '../src/get-integers.js'
+import getIntegers from '../src/get-integers.js'
 
 test.each([
   [0, 1, [0, 1]],
