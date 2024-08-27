@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const n=require("./to-number.cjs");function s(e){const t=e,o=n.toNumber(t);return new Promise(r=>{setTimeout(r,o)})}exports.sleep=s;

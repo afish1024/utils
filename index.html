@@ -24,7 +24,184 @@
   <body>
     <div id="root"></div>
     <!-- root -->
-    <script type="module" src="/docs/main.ts"></script>
+    <script type="module" src="/canvas/firework.ts"></script>
     <!-- <script type="module" src="/dist/index.js"></script> -->
+     <script type="module">
+      import { createFirework } from '/canvas/firework'
+      import { getImg, genBtn, downloadByData } from '/canvas/tools'
+      import { blobToBase64, compressImg, imgToNoise } from '/canvas/handleImg'
+      import { imgToTxt } from '/canvas/img-to-txt'
+      import { NoteBoard } from '/canvas/note-board.ts'
+      import { ShotImg } from '/canvas/shotimg.ts'
+
+      // handleImg()
+      // handleToNoise()
+      // toText()
+      // pngToText()
+      // videoToText()
+      // setBoard()
+      handleShotImg()
+
+      // canvas 烟花
+      function showFirework() {
+        const cvs = document.createElement('canvas')
+        document.body.appendChild(cvs);
+
+        window.cancel = createFirework(cvs)
+      }
+
+      // 图片噪点化
+      function handleToNoise() {
+        const input = document.createElement('input')
+        input.type = 'file'
+        document.body.appendChild(input)
+
+        input.onchange = async () => {
+            const file = input.files[0]
+            if (!file) return
+
+            const base64 = await blobToBase64(file)
+            const img = await getImg(base64) // as HTMLImageElement
+            const cvs = imgToNoise(img)
+            document.body.appendChild(cvs)
+        }
+      }
+
+      // 上传图片，将其转换为 base64
+      function handleImg() {
+        const input = document.createElement('input')
+        input.type = 'file'
+        document.body.appendChild(input)
+
+        input.onchange = async () => {
+            const file = input.files[0]
+            if (!file) return
+
+            const base64 = await blobToBase64(file)
+            const img = await getImg(base64) // as HTMLImageElement
+
+            const rawBase64 = await blobToBase64(file)
+            console.log(rawBase64)
+
+            const compressBase64 = await compressImg(img)
+            const newImg = await getImg(compressBase64) // as HTMLImageElement
+            document.body.appendChild(newImg)
+
+            console.log(compressBase64)
+        }
+      }
+
+      // 用文本来绘制图片或视频
+      function toText() {
+        const replaceText = '6';
+
+        const cvs = document.createElement('canvas')
+        document.body.appendChild(cvs)
+
+        imgToTxt({
+            canvas: cvs,
+            opts: {
+                txt: '哎呀你干嘛',
+                txtStyle: {
+                    family: '楷体',
+                }
+            },
+            replaceText,
+        })
+      }
+
+      function pngToText() {
+        const replaceText = '6';
+        const cvs = document.createElement('canvas')
+        document.body.appendChild(cvs)
+
+        imgToTxt({
+            canvas: cvs,
+            gap: 8,
+            isGray: false,
+            opts: {
+                img: './assets/1.png',
+                height: 500,
+            },
+            replaceText
+        })
+      }
+
+      function videoToText() {
+        const replaceText = '6';
+        const cvs = document.createElement('canvas')
+        document.body.appendChild(cvs)
+
+        imgToTxt({
+            canvas: cvs,
+            gap: 10,
+            isGray: false,
+            opts: {
+                video: './assets/1.mp4',
+                height: 500,
+            },
+            replaceText
+        })
+      }
+
+      // 签名画板
+      function setBoard() {
+
+        const canvas = document.createElement('canvas')
+        document.body.appendChild(canvas)
+
+        const board = new NoteBoard({
+            canvas,
+            bgColor: '#fff',
+            storkeColor: '#409eff'
+            // ...
+        })
+
+
+        genBtn('截图', async () => {
+            const src = await board.shotImg('base64')
+            const imgEl = new Image()
+            imgEl.src = src
+            document.body.appendChild(imgEl)
+        })
+
+        genBtn('清空', () => {
+            board.clear()
+        })
+      }
+
+      function handleShotImg() {
+        const input = document.createElement('input')
+        input.type = 'file'
+        document.body.appendChild(input)
+        document.body.appendChild(document.createElement('canvas'))
+
+        let si //: ShotImg
+
+        input.onchange = async () => {
+            const file = input.files[0]
+            if (!file) return
+
+            const base64 = await blobToBase64(file)
+            const img = await getImg(base64) // as HTMLImageElement
+
+            /**
+             * 示例如下，您只需传入 Canvas 和 一张图片 即可使用
+             * 或者创建实例后调用 `setImg` 设置图片
+             */
+            si = new ShotImg(document.querySelector('canvas'), img)
+        }
+
+        genBtn('下载图片', async () => {
+
+            /** 
+             * 获取图片的 blob 或者 base64
+             * 如果图片设置过大小，可能会导致截图区域不准确
+             */
+            const blob = await si.getShotImg('blob')
+            downloadByData(blob, 'shot.png')
+        })
+      }
+     </script>
   </body>
 </html>
