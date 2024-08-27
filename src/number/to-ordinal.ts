@@ -8,7 +8,7 @@ import toNumber from './to-number.js'
  * @category Number
  * @example
 ```ts
-import { toOrdinal } from '@fish/utils'
+import { toOrdinal } from '@fish1024/utils'
 
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd

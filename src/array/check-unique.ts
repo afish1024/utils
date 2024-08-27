@@ -3,14 +3,14 @@
  * @category Array
  * @example
 ```ts
-import { hasUnique } from '@fish/utils'
+import { checkUnique } from '@fish1024/utils'
 
-hasUnique([1, 2, 3]) // true
-hasUnique([1, 1, 2]) // false
-hasUnique('not array') // true
+checkUnique([1, 2, 3]) // true
+checkUnique([1, 1, 2]) // false
+checkUnique('not array') // true
 ```
  */
-export default function hasUnique(input: unknown): boolean {
+export default function checkUnique(input: unknown): boolean {
   if (Array.isArray(input)) {
     return new Set(input).size === input.length
   }

@@ -1,10 +1,13 @@
-import { defineConfig } from 'vite'
 import fs from 'fs'
 import path from 'path'
+import { expect, test } from 'vitest'
 
+import * as all from './index.js'
+
+let filenames: Array<string> = []
 let entries: Array<string> = []
 
-getUtilFiles(path.join(__dirname, './src'))
+getUtilFiles(path.join(__dirname, '../src'))
 
 function getUtilFiles(_path: string) {
   fs
@@ -31,20 +34,20 @@ function getUtilFiles(_path: string) {
         // Do not count hidden files, e.g. .DS_Store
         !n.startsWith('.')
       ) {
+        const name = n.replace(/\.ts$/gi, '')
+        filenames.push(name)
         entries.push(dirpath)
       }
     })
 }
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  build: {
-    lib: {
-      // entry: {
-      //   index: resolve(__dirname, 'src/index.ts'),
-      //   'get-integers': resolve(__dirname, 'src/get-integers.ts'),
-      // },
-      entry: entries
-    }
-  },
+console.log('======== dir', entries)
+
+const camelToKebab = (string_: string): string =>
+  string_.replaceAll(/([\da-z])([A-Z])/gu, '$1-$2').toLowerCase()
+
+const utils = Object.keys(all).map(camelToKebab)
+
+test('index exports all utils', () => {
+  expect(all.checkArrSame(filenames, utils)).toBe(true)
 })

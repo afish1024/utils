@@ -3,7 +3,7 @@
  * @category String
  * @example
 ```ts
-import { toCompactCase } from '@fish/utils'
+import { toCompactCase } from '@fish1024/utils'
 
 toCompactCase('this is text') // thisistext
 toCompactCase('someTEXT') // someTEXT

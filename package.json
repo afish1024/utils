@@ -1,6 +1,6 @@
 {
   "name": "@fish1024/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一个 JavaScript 公用方法集合",
   "main": "dist/index.js",
   "author": "afish1024",
@@ -19,7 +19,6 @@
     "postbuild": "rimraf ./docs/typedoc.json && typedoc",
     "preview": "vite preview",
     "#prepublishOnly": "npm run build",
-    "publish": "npm public",
     "bench": "vitest bench",
     "test": "vitest --watch=false",
     "coverage": "vitest run --coverage",

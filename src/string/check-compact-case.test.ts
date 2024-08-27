@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import hasCompactCase from '../src/has-compact-case.js'
+import checkCompactCase from './check-compact-case.js'
 
 const falsey = [
   123,
@@ -17,8 +17,8 @@ const falsey = [
         `,
 ]
 
-test.each(falsey)('%s is falsey', (input) => {
-  expect(hasCompactCase(input)).toBe(false)
+test.each(falsey)('%s is falsey', (input: unknown) => {
+  expect(checkCompactCase(input)).toBe(false)
 })
 
 const truthy = [
@@ -30,6 +30,6 @@ const truthy = [
   'special!@@£$%^%^*(-123',
 ]
 
-test.each(truthy)('%s is truthy', (input) => {
-  expect(hasCompactCase(input)).toBe(true)
+test.each(truthy)('%s is truthy', (input: string) => {
+  expect(checkCompactCase(input)).toBe(true)
 })

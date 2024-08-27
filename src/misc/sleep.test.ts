@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
-import sleep from '../src/sleep.js'
+import sleep from './sleep.js'
 
 // A test helper to spy on a callback and know if time has passed
 const sleepWrapper = async (ms: number, callback: () => void) => {

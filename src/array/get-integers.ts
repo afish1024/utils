@@ -3,7 +3,7 @@
  * @category Array
  * @example
 ```ts
-import { getIntegers } from '@fish/utils'
+import { getIntegers } from '@fish1024/utils'
 
 getIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
 getIntegers("abc", 6) // [] - 有一个参数不是数字

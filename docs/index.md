@@ -17,6 +17,6 @@ features:
   - title: 命名规则
     details: has 返回一个布尔值 <br /> get 返回一个新数据 <br /> to 强制转换输入值 <br />不返回数据的函数没有前缀
   - title: 安装
-    details: npm i @fish/utils
+    details: npm i @fish1024/utils
 ---
 

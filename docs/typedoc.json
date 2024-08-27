@@ -38,7 +38,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { getIntegers } from '@fish/utils'\n\ngetIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\ngetIntegers(\"abc\", 6) // [] - 有一个参数不是数字\n```"
+												"text": "```ts\nimport { getIntegers } from '@fish1024/utils'\n\ngetIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\ngetIntegers(\"abc\", 6) // [] - 有一个参数不是数字\n```"
 											}
 										]
 									}
@@ -105,14 +105,14 @@
 			"children": [
 				{
 					"id": 7,
-					"name": "hasCompactCase",
+					"name": "checkCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 8,
-							"name": "hasCompactCase",
+							"name": "checkCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -129,7 +129,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { hasCompactCase } from '@fish/utils'\n\nhasCompactCase('thisiscompact') // true\nhasCompactCase('this is not compact') // false\nhasCompactCase(123) // false - input is not a string\n```"
+												"text": "```ts\nimport { checkCompactCase } from '@fish1024/utils'\n\ncheckCompactCase('thisiscompact') // true\ncheckCompactCase('this is not compact') // false\ncheckCompactCase(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -187,14 +187,14 @@
 			"children": [
 				{
 					"id": 11,
-					"name": "hasLowerCase",
+					"name": "checkLowerCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 12,
-							"name": "hasLowerCase",
+							"name": "checkLowerCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -211,7 +211,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { hasLowerCase } from '@fish/utils'\n\nhasLowerCase('this is lower') // true\nhasLowerCase('This is not LOWER') // false\nhasLowerCase(123) // false - input is not a string\n```"
+												"text": "```ts\nimport { checkLowerCase } from '@fish1024/utils'\n\ncheckLowerCase('this is lower') // true\ncheckLowerCase('This is not LOWER') // false\ncheckLowerCase(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -269,14 +269,14 @@
 			"children": [
 				{
 					"id": 15,
-					"name": "hasRunningInBrowser",
+					"name": "checkBrowser",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 16,
-							"name": "hasRunningInBrowser",
+							"name": "checkBrowser",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -293,7 +293,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { hasRunningInBrowser } from '@fish/utils'\n\nhasRunningInBrowser() // true\n```"
+												"text": "```ts\nimport { checkBrowser } from '@fish1024/utils'\n\ncheckBrowser() // true\n```"
 											}
 										]
 									}
@@ -333,14 +333,14 @@
 			"children": [
 				{
 					"id": 18,
-					"name": "hasUnique",
+					"name": "checkUnique",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 19,
-							"name": "hasUnique",
+							"name": "checkUnique",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -357,7 +357,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { hasUnique } from '@fish/utils'\n\nhasUnique([1, 2, 3]) // true\nhasUnique([1, 1, 2]) // false\nhasUnique('not array') // true\n```"
+												"text": "```ts\nimport { checkUnique } from '@fish1024/utils'\n\ncheckUnique([1, 2, 3]) // true\ncheckUnique([1, 1, 2]) // false\ncheckUnique('not array') // true\n```"
 											}
 										]
 									}
@@ -410,14 +410,14 @@
 			"children": [
 				{
 					"id": 22,
-					"name": "hasUrlAbsolute",
+					"name": "checkUrlAbsolute",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 23,
-							"name": "hasUrlAbsolute",
+							"name": "checkUrlAbsolute",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -434,7 +434,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { hasUrlAbsolute } from '@fish/utils'\n\nhasUrlAbsolute(\"http://example.com/page\") // true\nhasUrlAbsolute(\"/page\") // false\nhasUrlAbsolute(123) // false - input is not a string\n```"
+												"text": "```ts\nimport { checkUrlAbsolute } from '@fish1024/utils'\n\ncheckUrlAbsolute(\"http://example.com/page\") // true\ncheckUrlAbsolute(\"/page\") // false\ncheckUrlAbsolute(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -511,7 +511,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { sleep } from '@fish/utils'\n\nawait sleep(2000) // 暂停 2 秒\nawait sleep(\"abc\") // 传人非数字的参数，暂停 0 秒\n```"
+												"text": "```ts\nimport { sleep } from '@fish1024/utils'\n\nawait sleep(2000) // 暂停 2 秒\nawait sleep(\"abc\") // 传人非数字的参数，暂停 0 秒\n```"
 											}
 										]
 									}
@@ -596,7 +596,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toCompactCase } from '@fish/utils'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+												"text": "```ts\nimport { toCompactCase } from '@fish1024/utils'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
 											}
 										]
 									}
@@ -673,7 +673,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toLetters } from '@fish/utils'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+												"text": "```ts\nimport { toLetters } from '@fish1024/utils'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
 											}
 										]
 									}
@@ -750,7 +750,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toNumber } from '@fish/utils'\n\ntoNumber('this is text') // 0\ntoNumber('3') // 3\ntoNumber(0.4) // 0.4\ntoNumber(new Set([])) // 0\n```"
+												"text": "```ts\nimport { toNumber } from '@fish1024/utils'\n\ntoNumber('this is text') // 0\ntoNumber('3') // 3\ntoNumber(0.4) // 0.4\ntoNumber(new Set([])) // 0\n```"
 											}
 										]
 									}
@@ -827,7 +827,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toOrdinal } from '@fish/utils'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\ntoOrdinal(3.14) // 3.14th\n```"
+												"text": "```ts\nimport { toOrdinal } from '@fish1024/utils'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\ntoOrdinal(3.14) // 3.14th\n```"
 											}
 										]
 									}

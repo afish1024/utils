@@ -3,7 +3,7 @@
  * @category Number
  * @example
 ```ts
-import { toNumber } from '@fish/utils'
+import { toNumber } from '@fish1024/utils'
 
 toNumber('this is text') // 0
 toNumber('3') // 3
@@ -12,7 +12,6 @@ toNumber(new Set([])) // 0
 ```
  */
 export default function toNumber(input: unknown): number {
-  try {
     const number = Number(input)
 
     if (Number.isNaN(number)) {
@@ -20,7 +19,4 @@ export default function toNumber(input: unknown): number {
     }
 
     return number
-  } catch {
-    return 0
-  }
 }

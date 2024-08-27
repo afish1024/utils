@@ -3,7 +3,7 @@
  * @category String
  * @example
 ```ts
-import { toLetters } from '@fish/utils'
+import { toLetters } from '@fish1024/utils'
 
 toLetters('this is text') // thisistext
 toLetters('123-Text!!!') // Text

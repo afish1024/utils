@@ -3,14 +3,14 @@
  * @category String
  * @example
 ```ts
-import { hasCompactCase } from '@fish/utils'
+import { checkCompactCase } from '@fish1024/utils'
 
-hasCompactCase('thisiscompact') // true
-hasCompactCase('this is not compact') // false
-hasCompactCase(123) // false - input is not a string
+checkCompactCase('thisiscompact') // true
+checkCompactCase('this is not compact') // false
+checkCompactCase(123) // false - input is not a string
 ```
  */
-export default function hasCompactCase(input: unknown): input is string {
+export default function checkCompactCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }

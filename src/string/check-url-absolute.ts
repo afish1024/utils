@@ -3,14 +3,14 @@
  * @category String
  * @example
 ```ts
-import { hasUrlAbsolute } from '@fish/utils'
+import { checkUrlAbsolute } from '@fish1024/utils'
 
-hasUrlAbsolute("http://example.com/page") // true
-hasUrlAbsolute("/page") // false
-hasUrlAbsolute(123) // false - input is not a string
+checkUrlAbsolute("http://example.com/page") // true
+checkUrlAbsolute("/page") // false
+checkUrlAbsolute(123) // false - input is not a string
 ```
  */
-export default function hasUrlAbsolute(url: unknown): boolean {
+export default function checkUrlAbsolute(url: unknown): boolean {
   if (typeof url !== 'string') return false
   // regex sourced from https://stackoverflow.com/a/19709846
   return /^(?:[+a-z]+:)?\/\//iu.test(url)

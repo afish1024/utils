@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import toNumber from '../src/to-number.js'
+import toNumber from './to-number.js'
 
 const cases = [
   [-2, -2],

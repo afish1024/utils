@@ -6,7 +6,7 @@ import { getColor } from './color'
  * @category Canvas
  * @example
 ```ts
-import { createFirework } from '@fish/utils'
+import { createFirework } from '@fish1024/utils'
 
 const cvs = document.createElement('canvas')
 document.body.appendChild(cvs);

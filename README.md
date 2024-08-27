@@ -1,5 +1,5 @@
 
-# `@fish/utils`
+# `@fish1024/utils`
 
 A collection of small JavaScript utilities.
 
