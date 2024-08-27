@@ -1,0 +1,894 @@
+{
+	"id": 0,
+	"name": "tings",
+	"kind": 1,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "get-integers",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "getIntegers",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "getIntegers",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "生成一个从给定数字到另一个数字的整数数组。"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { getIntegers } from '@fish/utils'\n\ngetIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\ngetIntegers(\"abc\", 6) // [] - 有一个参数不是数字\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "from",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								},
+								{
+									"id": 5,
+									"name": "to",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						2
+					],
+					"categories": [
+						{
+							"title": "Array",
+							"children": [
+								2
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "has-compact-case",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 7,
+					"name": "hasCompactCase",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 8,
+							"name": "hasCompactCase",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "检查传入的字符串参数是否包含空格，非字符串、带空格返回 false"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { hasCompactCase } from '@fish/utils'\n\nhasCompactCase('thisiscompact') // true\nhasCompactCase('this is not compact') // false\nhasCompactCase(123) // false - input is not a string\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 9,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "predicate",
+								"name": "input",
+								"asserts": false,
+								"targetType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						7
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								7
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 10,
+			"name": "has-lower-case",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 11,
+					"name": "hasLowerCase",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 12,
+							"name": "hasLowerCase",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "检查传入的字符串参数是否包含大写字母，包含大写字母、非字符串返回 false"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { hasLowerCase } from '@fish/utils'\n\nhasLowerCase('this is lower') // true\nhasLowerCase('This is not LOWER') // false\nhasLowerCase(123) // false - input is not a string\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 13,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "predicate",
+								"name": "input",
+								"asserts": false,
+								"targetType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						11
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								11
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "has-running-in-browser",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 15,
+					"name": "hasRunningInBrowser",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 16,
+							"name": "hasRunningInBrowser",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "检查当前代码是否在浏览器中运行"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { hasRunningInBrowser } from '@fish/utils'\n\nhasRunningInBrowser() // true\n```"
+											}
+										]
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						15
+					],
+					"categories": [
+						{
+							"title": "Environment",
+							"children": [
+								15
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 17,
+			"name": "has-unique",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 18,
+					"name": "hasUnique",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 19,
+							"name": "hasUnique",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "检查数组项是否唯一。对于非数组的任何值将返回 true。"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { hasUnique } from '@fish/utils'\n\nhasUnique([1, 2, 3]) // true\nhasUnique([1, 1, 2]) // false\nhasUnique('not array') // true\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 20,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						18
+					],
+					"categories": [
+						{
+							"title": "Array",
+							"children": [
+								18
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "has-url-absolute",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 22,
+					"name": "hasUrlAbsolute",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 23,
+							"name": "hasUrlAbsolute",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "检查传入的 URL 字符串参数是否以协议开头来确定它是否是绝对路径，非字符串将返回 false"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { hasUrlAbsolute } from '@fish/utils'\n\nhasUrlAbsolute(\"http://example.com/page\") // true\nhasUrlAbsolute(\"/page\") // false\nhasUrlAbsolute(123) // false - input is not a string\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 24,
+									"name": "url",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						22
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								22
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 25,
+			"name": "sleep",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 26,
+					"name": "sleep",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 27,
+							"name": "sleep",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "暂停当前函数"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { sleep } from '@fish/utils'\n\nawait sleep(2000) // 暂停 2 秒\nawait sleep(\"abc\") // 传人非数字的参数，暂停 0 秒\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 28,
+									"name": "milliseconds",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"qualifiedName": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						26
+					],
+					"categories": [
+						{
+							"title": "Misc",
+							"children": [
+								26
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 29,
+			"name": "to-compact-case",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 30,
+					"name": "toCompactCase",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 31,
+							"name": "toCompactCase",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "从传入字符串参数中删除所有空白字符。"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toCompactCase } from '@fish/utils'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 32,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						30
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								30
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 33,
+			"name": "to-letters",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 34,
+					"name": "toLetters",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 35,
+							"name": "toLetters",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "从传入的字符串参数中删除所有非字母字符"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toLetters } from '@fish/utils'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						34
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								34
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 37,
+			"name": "to-number",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 38,
+					"name": "toNumber",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 39,
+							"name": "toNumber",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "将传入的参数作为数字返回，不能转换成数字则返回 0"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toNumber } from '@fish/utils'\n\ntoNumber('this is text') // 0\ntoNumber('3') // 3\ntoNumber(0.4) // 0.4\ntoNumber(new Set([])) // 0\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 40,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						38
+					],
+					"categories": [
+						{
+							"title": "Number",
+							"children": [
+								38
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 41,
+			"name": "to-ordinal",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 42,
+					"name": "toOrdinal",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 43,
+							"name": "toOrdinal",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "如果可能，将数字转换为其序数字符串形式，否则返回第 0 个。\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toOrdinal } from '@fish/utils'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\ntoOrdinal(3.14) // 3.14th\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 44,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"defaultValue": "0"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						42
+					],
+					"categories": [
+						{
+							"title": "Number",
+							"children": [
+								42
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				1,
+				6,
+				10,
+				14,
+				17,
+				21,
+				25,
+				29,
+				33,
+				37,
+				41
+			]
+		}
+	]
+}

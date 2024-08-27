@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function a(n,r){if(typeof n!="number"||typeof r!="number")return[];const e=Math.trunc(n),o=Math.trunc(r),u=e<o?1:-1,c=Math.abs(o-e)+1,s=new Array(c);for(let t=0;t<c;t=t+1)s[t]=e+t*u;return s}exports.getIntegers=a;
