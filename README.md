@@ -3,6 +3,8 @@
 
 A collection of small JavaScript utilities.
 
+Website:
+
 使用：
 
 ```bash
@@ -17,6 +19,18 @@ import { getIntegers } from "@fish1024/utils"
 import getIntegers from "@fish1024/utils/get-integers"
 ```
 
+
+category:
+- Array 数组
+- Collection 集合
+- Function 函数
+- Lang 语言
+- Number 数字
+- Object 对象
+- String 字符串
+- Util 实用函数
+- Properties
+- Methods
 
 ## issue
 

@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NEXT_TELEMETRY_DISABLED=1 next build",
+    "export": "next export",
+    "dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
+    "start": "NEXT_TELEMETRY_DISABLED=1 next start"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "autoprefixer": "^10.4.14",
+    "next": "^13.2.4",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.6",
+    "react-syntax-highlighter": "^15.5.0",
+    "tailwind-scrollbar": "^3.0.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {}
+}
